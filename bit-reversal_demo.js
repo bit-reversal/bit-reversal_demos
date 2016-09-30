@@ -47,11 +47,12 @@ drawRboTrees= function (mySVG, k,s, step){
     myGroup.setAttribute("transform", 'translate(0,'+((ySize-1)*step)+') scale(1,-1)');
 }
 
+var animatorId=null; // global variable set by drawRboTreesAnimate
+
 drawRboTreesAnimate=function(mySVG, k,s, step){
     drawRboTrees(mySVG, k,s, step);
     s=(s+1) % (1<<k);
-
-    setTimeout(function(){ drawRboTreesAnimate(mySVG, k,s, step); }, 600);
+    animatorId=setTimeout(function(){ drawRboTreesAnimate(mySVG, k,s, step); }, 600);
     
 };
 
