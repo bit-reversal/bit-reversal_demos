@@ -28,7 +28,7 @@ setDimmensions= function( mySVG, width, height, xMargin, yMargin){
     mySVG.setAttribute("width", ''+(width+2*xMargin));
     mySVG.setAttribute("height", ''+(height+2*yMargin));
     mySVG.setAttribute("viewBox", ' '+(-xMargin)+', '+(-yMargin)+', '+(width+2*xMargin)+', '+(height+2*yMargin));
- 
+    
 }
 
 graphOfFunction= function( func, xMin, xMax, pixStep, pixColor, pixSize){
@@ -40,4 +40,18 @@ graphOfFunction= function( func, xMin, xMax, pixStep, pixColor, pixSize){
     }
     return out;
 }
+
+edgesByX= function( func, /*int[][]*/ edgesX, color, width){
+    // draw edges between the points of the graph
+    out='';
+    var i;
+    for(i=0; i<edgesX.length; i++)
+	out+=line( edgesX[i][0]*step, func(edgesX[i][0])*step,
+		   edgesX[i][1]*step, func(edgesX[i][1])*step,
+		   color, width );
+    return out;
+}
+
+
+
 
