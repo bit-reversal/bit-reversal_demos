@@ -4,12 +4,27 @@
     <title>Bit-reversal RBO demo</title>
   </head>
   <body>
-    <svg id="mySVG" width="100" height="100" style="background-color:yellow;">
-    </svg>
 
     <script src="js/mySVG.js"></script>
     <script src="js/rbo.js"></script>
     <script src="bit-reversal_demo.js"></script>
+    
+    <svg id="mySVG" width="100" height="100" style="background-color:white;">
+    </svg>
+
+    <script>
+     mySVG=document.querySelector("#mySVG");
+     var k=6; // k-bit-reversal
+     var s=0; // initial starting point
+     var step=10; // unit distance in pixels
+     drawRboTreesAnimate(mySVG, k,s, step); // starting the animation
+    </script>
+    
+    <p>
+      This animation displays binary trees on the graph of a bit-reversal function.
+      The trees show decompositions of time-slots during the first receiver's cycle
+      (between the red lines) in <a href="https://sites.google.com/site/rboprotocol/">RBO broadcast scheduling</a>. 
+    </p>
 
   </body>
 </html>
