@@ -41,7 +41,7 @@ graphOfFunction= function( func, xMin, xMax, pixStep, pixColor, pixSize){
     return out;
 }
 
-edgesByX= function( func, /*int[][]*/ edgesX, color, width){
+edgesByX= function( func, /*int[][]*/ edgesX, color, width, step){
     // draw edges between the points of the graph
     out='';
     var i;

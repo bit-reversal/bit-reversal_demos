@@ -41,7 +41,7 @@ drawRboTrees= function (mySVG, k,s, step){
 
 //    for(i=0; i<Math.max(1,trees.length-1); i++) // the last tree is on the entire range 
     for(i=0; i<trees.length; i++) // the last tree is on the entire range 
-	myGroup.innerHTML+= edgesByX( function(x){ return revBits(k, x); }, trees[i], edgeLineColor, edgeLineWidth);
+	myGroup.innerHTML+= edgesByX( function(x){ return revBits(k, x); }, trees[i], edgeLineColor, edgeLineWidth, step);
 
     // myGroup.setAttribute("transform", 'scale(1,1) translate(0,'+(ySize*step)+')');
     myGroup.setAttribute("transform", 'translate(0,'+((ySize-1)*step)+') scale(1,-1)');

@@ -14,22 +14,24 @@
 
     <script>
      mySVG=document.querySelector("#mySVG");
-     var k=5; // k-bit-reversal
-     var s=0; // initial starting point
-     var step=10; // unit distance in pixels
-     drawRboTreesAnimate(mySVG, k,s, step); // starting the animation - updates animatorId global variable
+     // var k=5; // k-bit-reversal
+     // var s=0; // initial starting point
+     // var step=10; // unit distance in pixels
+     // drawRboTreesAnimate(mySVG, k,s, step); // starting the animation - updates animatorId global variable
+     drawRboTreesAnimate(mySVG, 5,0, 10); // starting the animation - updates animatorId global variable
     </script>
 
     <div>
-      <button type="button" onclick="clearTimeout(animatorId);drawRboTreesAnimate(mySVG, 4,0, step);">4 bits</button>
-      <button type="button" onclick="clearTimeout(animatorId);drawRboTreesAnimate(mySVG, 5,0, step);">5 bits</button>
-      <button type="button" onclick="clearTimeout(animatorId);drawRboTreesAnimate(mySVG, 6,0, step);">6 bits</button>
+      <button type="button" onclick="clearTimeout(animatorId);drawRboTreesAnimate(mySVG, 4,0, 10);">4 bits</button>
+      <button type="button" onclick="clearTimeout(animatorId);drawRboTreesAnimate(mySVG, 5,0, 10);">5 bits</button>
+      <button type="button" onclick="clearTimeout(animatorId);drawRboTreesAnimate(mySVG, 6,0, 10);">6 bits</button>
     </div>
     
     <p>
       This animation displays binary trees on the graph of a bit-reversal function.
       The trees show decompositions of time-slots of the first receiver's cycle
-      (between the red lines) in an analysis of <a href="https://sites.google.com/site/rboprotocol/" target="_blank">RBO broadcast scheduling</a>. 
+      (between the red lines)  for various starting times in the analysis of
+      <a href="https://sites.google.com/site/rboprotocol/" target="_blank">RBO broadcast scheduling</a>. 
     </p>
 
   </body>
